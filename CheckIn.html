@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day-of check-in · Samaky for Nonprofits</title>
+<link rel="icon" href="brand/maky.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;family=Poppins:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FAF9F5}
+a{color:#1A1A1A}a:hover{color:#4C6B4A}
+</style>
+<script src="dc-lite.js"></script>
+</head>
+<body>
+<div id="dc-root"></div>
+<template id="dc-template">
+<div style="min-height: 100vh; display: flex; flex-wrap: wrap; align-items: stretch; background: #FAF9F5; font-family: 'Poppins', system-ui, sans-serif; color: #1A1A1A;">
+
+  <nav aria-label="Main" style="flex: 1 1 248px; box-sizing: border-box; background: #1A1A1A; color: #FAF9F5; padding: 28px 18px; display: flex; flex-direction: column; gap: 4px;">
+    <a href="index.html" style="display: block; padding: 0 10px 24px;"><img src="brand/samaky-logo-dark.svg" alt="Samaky, Catalyze Kindness" style="display: block; width: 190px; height: auto;"></a>
+    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #B9B3A8; padding: 0 12px 6px;">Coordinate</div>
+    <a href="index.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; text-decoration: none; font-size: 15px; color: #FAF9F5;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Home</a>
+    <a href="Calendar.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; text-decoration: none; font-size: 15px; color: #FAF9F5;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4M16 2v4M3 10h18M8 14h2M14 14h2M8 17h2"/></svg>Calendar</a>
+    <a href="Templates.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; text-decoration: none; font-size: 15px; color: #FAF9F5;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M12 8v8M8 12h8"/></svg>Opportunities</a>
+    <a href="CheckIn.html" aria-current="page" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; text-decoration: none; font-size: 15px; background: #99D293; color: #1A1A1A; font-weight: 600;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM18 18h3v3"/></svg>Day-of check-in</a>
+    <a href="CheckIn.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; text-decoration: none; font-size: 15px; color: #FAF9F5;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>Verify hours<span style="margin-left: auto; background: #B97F5B; color: #1A1A1A; font-size: 12px; font-weight: 700; border-radius: 999px; padding: 2px 8px;">8</span></a>
+    <a href="Reports.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; text-decoration: none; font-size: 15px; color: #FAF9F5;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Reports</a>
+    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #B9B3A8; padding: 18px 12px 6px;">Engage</div>
+    <a href="Letters.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; text-decoration: none; font-size: 15px; color: #FAF9F5;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Write a letter</a>
+    <a href="Clubs.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; text-decoration: none; font-size: 15px; color: #FAF9F5;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="4"/><path d="M2 21c0-4 3-6 7-6s7 2 7 6M17 4a4 4 0 0 1 0 8M22 21c0-3-2-5-4-5.5"/></svg>Clubs<span style="margin-left: auto; background: #B97F5B; color: #1A1A1A; font-size: 12px; font-weight: 700; border-radius: 999px; padding: 2px 8px;">2</span></a>
+    <a href="Campaigns.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; text-decoration: none; font-size: 15px; color: #FAF9F5;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a1 1 0 0 0 1 1h2l6 4V6L6 10H4a1 1 0 0 0-1 1zM16 9a4 4 0 0 1 0 6M19 6a8 8 0 0 1 0 12"/></svg>Campaigns</a>
+    <a href="Challenges.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; text-decoration: none; font-size: 15px; color: #FAF9F5;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg>Challenges<span style="margin-left: auto; background: #B97F5B; color: #1A1A1A; font-size: 12px; font-weight: 700; border-radius: 999px; padding: 2px 8px;">1</span></a>
+    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #B9B3A8; padding: 18px 12px 6px;">Setup</div>
+    <a href="Connect.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; text-decoration: none; font-size: 15px; color: #FAF9F5;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>Connect a platform</a>
+    <a href="Onboarding.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; text-decoration: none; font-size: 15px; color: #FAF9F5;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V6l8-3 8 3v15M9 21v-5h6v5M9 9h.01M15 9h.01M9 13h.01M15 13h.01"/></svg>Profile and team</a>
+    <a href="Maky.html" style="display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 14px 0 8px; margin-top: 18px; border-radius: 14px; background: #FAF9F5; color: #1A1A1A; text-decoration: none; font-weight: 600; font-size: 15px; "><img src="brand/maky.png" alt="" style="width: 34px; height: 34px; border-radius: 999px; object-fit: cover;">Ask Maky</a>
+    <div style="margin-top: auto; padding-top: 28px; display: flex; align-items: center; gap: 12px;">
+      <div aria-hidden="true" style="width: 44px; height: 44px; flex: 0 0 44px; border-radius: 999px; background: #99D293; color: #1A1A1A; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 15px;">ES</div>
+      <div style="font-size: 13px; line-height: 1.4;"><div style="font-weight: 600; color: #FAF9F5;">Eastside Senior Commons</div><div style="color: #99D293;">✓ Verified 501(c)(3)</div></div>
+    </div>
+  </nav>
+
+  <main style="flex: 999 1 560px; min-width: 0; box-sizing: border-box; padding: 28px clamp(16px, 3vw, 40px) 48px; display: flex; flex-direction: column; gap: 22px;">
+
+    <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 18px;">
+      <div style="flex: 1 1 420px;">
+        <div style="font-size: 14px; font-weight: 700; color: #4C6B4A;">Today · Saturday, Nov 7 · 9:00 to 12:00</div>
+        <h1 style="margin: 8px 0 0; font-family: 'Fraunces', Georgia, serif; font-size: clamp(32px, 3.6vw, 44px); line-height: 1.05; letter-spacing: -1px;">Saturday Tech Help</h1>
+      </div>
+      <div style="font-family: 'Fraunces', Georgia, serif; font-weight: 700; font-size: 40px;">{{here}} <span style="font-size: 20px; color: #5E5B53;">of {{total}} here</span></div>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 18px; align-items: flex-start;">
+
+      <section style="flex: 2 1 300px; min-width: 0; background: #1A1A1A; color: #FAF9F5; border-radius: 24px; padding: 26px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center;">
+        <h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-size: 24px;">Scan to check in</h2>
+        <div role="img" aria-label="Check-in QR code" style="background: #FFFFFF; border-radius: 18px; padding: 16px;">
+          <div style="display: grid; grid-template-columns: repeat(21, 9px); gap: 0;">
+            <sc-for list="{{qr}}" as="q" hint-placeholder-count="441">
+              <div style="width: 9px; height: 9px; background: {{q}};"></div>
+            </sc-for>
+          </div>
+        </div>
+        <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #CFC9BD; max-width: 300px;">No app download needed. Walk-ups can scan too. The code changes every few minutes so nobody checks in from home.</p>
+        <button type="button" style="min-height: 46px; padding: 0 20px; border-radius: 999px; border: 1.5px solid #FAF9F5; background: transparent; color: #FAF9F5; font: inherit; font-weight: 700; font-size: 14px; cursor: pointer;">Show full screen on a tablet</button>
+      </section>
+
+      <section style="flex: 3 1 440px; min-width: 0; background: #FFFFFF; border-radius: 24px; padding: 24px; box-sizing: border-box;">
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 6px;">
+          <h2 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-size: 24px;">Who's coming</h2>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <button type="button" style="min-height: 44px; padding: 0 16px; border-radius: 999px; border: 2px solid #1A1A1A; background: #FFFFFF; font: inherit; font-weight: 700; font-size: 14px; cursor: pointer;">+ Add a walk-up</button>
+            <button type="button" style="min-height: 44px; padding: 0 16px; border-radius: 999px; border: 2px solid #1A1A1A; background: #FFFFFF; font: inherit; font-weight: 700; font-size: 14px; cursor: pointer;">Text who's not here</button>
+          </div>
+        </div>
+        <div style="font-size: 14px; color: #5E5B53; margin-bottom: 8px;">Tap a name to check someone in by hand.</div>
+        <sc-for list="{{people}}" as="p" hint-placeholder-count="7">
+          <button type="button" onClick="{{p.toggle}}" aria-pressed="{{p.pressed}}" style="width: 100%; display: flex; align-items: center; gap: 12px; min-height: 60px; padding: 8px 4px; border: 0; border-top: 1px solid #E5E1D3; background: #FFFFFF; font: inherit; color: #1A1A1A; text-align: left; cursor: pointer;">
+            <span aria-hidden="true" style="width: 40px; height: 40px; flex: 0 0 40px; border-radius: 999px; background: #E5E1D3; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px;">{{p.ini}}</span>
+            <span style="flex: 1 1 auto; min-width: 0;"><span style="display: block; font-weight: 700; font-size: 15px;">{{p.name}}</span><span style="display: block; font-size: 13px; color: #5E5B53;">{{p.note}}</span></span>
+            <span style="{{p.badgeStyle}}">{{p.badge}}</span>
+          </button>
+        </sc-for>
+      </section>
+    </div>
+
+    <section style="background: #99D293; border-radius: 24px; padding: 22px 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px;">
+      <div style="flex: 1 1 360px;">
+        <div style="font-family: 'Fraunces', Georgia, serif; font-weight: 700; font-size: 22px;">When the shift ends, verify everyone at once</div>
+        <div style="font-size: 15px; margin-top: 4px;">{{here}} people checked in · 3 hours each. Hours go to each student's Samaky record after you confirm.</div>
+      </div>
+      <button type="button" style="min-height: 52px; padding: 0 24px; border-radius: 999px; border: 0; background: #4C6B4A; color: #FFFFFF; font: inherit; font-weight: 700; font-size: 15px; cursor: pointer;">Finish shift and verify</button>
+    </section>
+
+  </main>
+</div>
+</template>
+<script type="text/x-dc" id="dc-logic">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { inList: { 0: true, 1: true, 2: false, 3: true, 4: false, 5: true, 6: true } };
+  }
+  renderVals() {
+    var self = this;
+    var base = [
+      { ini: 'AN', name: 'Aisha N.', note: 'Univ. of St. Thomas · First time' },
+      { ini: 'EV', name: 'Elena V.', note: 'Returning · 6th shift' },
+      { ini: 'MR', name: 'Marcus R.', note: 'Shakopee High · Guardian consent on file' },
+      { ini: 'TS', name: 'Tommies Serve club', note: 'Group of 8 · Leader: Sophea K.' },
+      { ini: 'JL', name: 'Jordan L.', note: 'Univ. of Minnesota' },
+      { ini: 'DP', name: 'Dara P.', note: 'Walk-up · Added at the door' },
+      { ini: 'KC', name: 'Kim C.', note: 'Community member' }
+    ];
+    var inList = this.state.inList;
+    var here = 0;
+    var people = base.map(function (b, i) {
+      var on = !!inList[i];
+      var count = b.name.indexOf('club') > -1 ? 8 : 1;
+      if (on) here += count;
+      return {
+        ini: b.ini, name: b.name, note: b.note,
+        pressed: on ? 'true' : 'false',
+        badge: on ? 'Here' : 'Not yet',
+        badgeStyle: 'border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 700; white-space: nowrap; ' + (on ? 'background: #99D293; color: #1A1A1A;' : 'background: #FFFFFF; color: #5E5B53; border: 1.5px dashed #8A857C;'),
+        toggle: function () { var n = Object.assign({}, self.state.inList); n[i] = !n[i]; self.setState({ inList: n }); }
+      };
+    });
+    var N = 21, qr = [];
+    var finder = function (r, c) {
+      var spots = [[0, 0], [0, 14], [14, 0]];
+      for (var s = 0; s < 3; s++) {
+        var dr = r - spots[s][0], dc = c - spots[s][1];
+        if (dr >= 0 && dr < 7 && dc >= 0 && dc < 7) {
+          if (dr === 0 || dr === 6 || dc === 0 || dc === 6) return 1;
+          if (dr >= 2 && dr <= 4 && dc >= 2 && dc <= 4) return 1;
+          return 0;
+        }
+        if (dr >= -1 && dr <= 7 && dc >= -1 && dc <= 7) return 0;
+      }
+      return -1;
+    };
+    for (var r = 0; r < N; r++) {
+      for (var c = 0; c < N; c++) {
+        var f = finder(r, c);
+        var on = f === -1 ? (((r * 7 + c * 13 + r * c) % 5) < 2) : f === 1;
+        qr.push(on ? '#1A1A1A' : '#FFFFFF');
+      }
+    }
+    return { people: people, here: here, total: 14, qr: qr };
+  }
+}
+</script>
+<div aria-label="Demo with sample data" style="position:fixed;right:16px;bottom:16px;z-index:50;background:#1A1A1A;color:#FAF9F5;font:600 13px/1 Poppins,system-ui,sans-serif;padding:10px 14px;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.18)">Demo · sample data</div>
+</body>
+</html>
