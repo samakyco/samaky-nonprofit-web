@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script>if (window.top === window) { try { sessionStorage.setItem('samaky-start', location.pathname.split('/').pop() || 'Home.html'); } catch (e) {} location.replace('/'); }</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verify hours · Samaky for Nonprofits</title>
+<link rel="icon" href="brand/maky.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;family=Poppins:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#FAF9F5}
+a{color:#1A1A1A}a:hover{color:#4C6B4A}
+</style>
+<script src="dc-lite.js"></script>
+</head>
+<body>
+<div id="dc-root"></div>
+<template id="dc-template">
+<div style="min-height: 100vh; display: flex; flex-wrap: wrap; align-items: stretch; background: #FAF9F5; font-family: 'Poppins', system-ui, sans-serif; color: #1A1A1A;">
+
+  <nav aria-label="Main" style="flex: 1 1 248px; box-sizing: border-box; background: #1A1A1A; color: #FAF9F5; padding: 28px 18px; display: flex; flex-direction: column; gap: 4px;">
+    <a href="Home.html" style="display: block; padding: 0 10px 18px;"><img src="brand/samaky-logo-dark.svg" alt="Samaky, Catalyze Kindness" style="display: block; width: 190px; height: auto;"></a>
+    <div style="margin: 0 2px 16px; padding: 14px; border-radius: 16px; background: #2A2A2A; display: flex; align-items: center; gap: 12px;">
+      <div aria-hidden="true" style="width: 48px; height: 48px; flex: 0 0 48px; border-radius: 12px; background: #99D293; color: #1A1A1A; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px;">ES</div>
+      <div style="min-width: 0; line-height: 1.35;"><div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px;"><span style="font-weight: 600; font-size: 15px; color: #FAF9F5;">Eastside Senior Commons</span><span style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; border-radius: 999px; padding: 2px 8px; background: #F3E6DC; color: #7A4A21;">Demo</span></div><div style="font-size: 12px; color: #99D293; margin-top: 2px;">✓ Verified 501(c)(3)</div></div>
+    </div>
+    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #B9B3A8; padding: 0 12px 6px;">Coordinate</div>
+    <a href="Home.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; text-decoration: none; font-size: 15px; white-space: nowrap; color: #FAF9F5;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Home</a>
+    <a href="Calendar.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; text-decoration: none; font-size: 15px; white-space: nowrap; color: #FAF9F5;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4M16 2v4M3 10h18M8 14h2M14 14h2M8 17h2"/></svg>Calendar</a>
+    <a href="Templates.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; text-decoration: none; font-size: 15px; white-space: nowrap; color: #FAF9F5;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M12 8v8M8 12h8"/></svg>Opportunities</a>
+    <a href="CheckIn.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; text-decoration: none; font-size: 15px; white-space: nowrap; color: #FAF9F5;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM18 18h3v3"/></svg>Day-of check-in</a>
+    <a href="Verify.html" aria-current="page" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; text-decoration: none; font-size: 15px; white-space: nowrap; background: #99D293; color: #1A1A1A; font-weight: 600;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>Verify hours<span style="margin-left: auto; background: #B97F5B; color: #1A1A1A; font-size: 12px; font-weight: 700; border-radius: 999px; padding: 2px 8px;">8</span></a>
+    <a href="Reports.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; text-decoration: none; font-size: 15px; white-space: nowrap; color: #FAF9F5;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Reports</a>
+    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #B9B3A8; padding: 18px 12px 6px;">Engage</div>
+    <a href="Letters.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; text-decoration: none; font-size: 15px; white-space: nowrap; color: #FAF9F5;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Write a letter</a>
+    <a href="Clubs.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; text-decoration: none; font-size: 15px; white-space: nowrap; color: #FAF9F5;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="4"/><path d="M2 21c0-4 3-6 7-6s7 2 7 6M17 4a4 4 0 0 1 0 8M22 21c0-3-2-5-4-5.5"/></svg>Clubs<span style="margin-left: auto; background: #B97F5B; color: #1A1A1A; font-size: 12px; font-weight: 700; border-radius: 999px; padding: 2px 8px;">2</span></a>
+    <a href="Campaigns.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; text-decoration: none; font-size: 15px; white-space: nowrap; color: #FAF9F5;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a1 1 0 0 0 1 1h2l6 4V6L6 10H4a1 1 0 0 0-1 1zM16 9a4 4 0 0 1 0 6M19 6a8 8 0 0 1 0 12"/></svg>Campaigns</a>
+    <a href="Challenges.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; text-decoration: none; font-size: 15px; white-space: nowrap; color: #FAF9F5;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0zM17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg>Challenges<span style="margin-left: auto; background: #B97F5B; color: #1A1A1A; font-size: 12px; font-weight: 700; border-radius: 999px; padding: 2px 8px;">1</span></a>
+    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: #B9B3A8; padding: 18px 12px 6px;">Setup</div>
+    <a href="Connect.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; text-decoration: none; font-size: 15px; white-space: nowrap; color: #FAF9F5;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>Connect apps</a>
+    <a href="Onboarding.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; text-decoration: none; font-size: 15px; white-space: nowrap; color: #FAF9F5;"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V6l8-3 8 3v15M9 21v-5h6v5M9 9h.01M15 9h.01M9 13h.01M15 13h.01"/></svg>Profile and team</a>
+    <a href="Maky.html" style="display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 14px 0 8px; margin-top: auto; border-radius: 14px; background: #FAF9F5; color: #1A1A1A; text-decoration: none; font-weight: 600; font-size: 15px;"><img src="brand/maky.png" alt="" style="width: 34px; height: 34px; border-radius: 999px; object-fit: cover;">Ask Maky</a>
+  </nav>
+
+  <main style="flex: 999 1 560px; min-width: 0; box-sizing: border-box; padding: 28px clamp(16px, 3vw, 40px) 48px; display: flex; flex-direction: column; gap: 22px;">
+
+    <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 18px;">
+      <div style="flex: 1 1 420px;">
+        <h1 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-size: clamp(32px, 3.6vw, 44px); line-height: 1.05; letter-spacing: -1px;">Verify hours</h1>
+        <p style="margin: 10px 0 0; font-size: 16px; line-height: 1.5; color: #5E5B53; max-width: 640px;">Only your team can verify hours. Once you confirm, the hours go to each volunteer's Samaky record, and their school can approve them for credit.</p>
+      </div>
+      <button type="button" onClick="{{verifyAll}}" disabled="{{noneLeft}}" style="{{allStyle}}">Verify all</button>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px;">
+      <div style="background: #99D293; border-radius: 24px; padding: 22px;">
+        <div style="font-weight: 700; font-size: 15px;">Waiting for you</div>
+        <div style="font-family: 'Fraunces', Georgia, serif; font-weight: 700; font-size: 52px; line-height: 1.1; margin-top: 8px;">{{pendingHrs}} hrs</div>
+        <div style="font-size: 14px;">from {{pendingCount}} volunteers</div>
+      </div>
+      <div style="background: #FFFFFF; border-radius: 24px; padding: 22px;">
+        <div style="font-weight: 700; font-size: 15px;">Verified today</div>
+        <div style="font-family: 'Fraunces', Georgia, serif; font-weight: 700; font-size: 52px; line-height: 1.1; margin-top: 8px; color: #4C6B4A;">{{doneHrs}} hrs</div>
+        <div style="font-size: 14px; color: #5E5B53;">added to volunteers' records</div>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 18px; align-items: flex-start;">
+      <section style="flex: 3 1 520px; min-width: 0; background: #FFFFFF; border-radius: 24px; padding: 8px 24px 16px; box-sizing: border-box;">
+        <div style="font-size: 14px; color: #5E5B53; padding: 14px 0 6px;">Saturday Tech Help · Sat, Oct 31 · 9:00 to 11:00</div>
+        <sc-for list="{{rows}}" as="r" hint-placeholder-count="4">
+          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; padding: 16px 0; border-top: 1px solid #E5E1D3;">
+            <div aria-hidden="true" style="width: 44px; height: 44px; flex: 0 0 44px; border-radius: 999px; background: #E4F1E1; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px;">{{r.ini}}</div>
+            <div style="flex: 1 1 200px; min-width: 0;">
+              <div style="font-weight: 700; font-size: 16px;">{{r.name}}</div>
+              <div style="font-size: 13px; color: #5E5B53; margin-top: 2px;">{{r.school}} · Checked in {{r.inT}}, out {{r.outT}}</div>
+            </div>
+            <div role="group" aria-label="Hours for {{r.name}}" style="display: flex; align-items: center; gap: 6px;">
+              <sc-if value="{{r.pending}}" hint-placeholder-val="{{true}}">
+                <button type="button" onClick="{{r.less}}" aria-label="Fewer hours" style="width: 36px; height: 36px; border-radius: 999px; border: 1.5px solid #E0DCCD; background: #FFFFFF; font: inherit; font-weight: 700; font-size: 18px; color: #1A1A1A; cursor: pointer;">−</button>
+              </sc-if>
+              <div style="min-width: 64px; text-align: center;"><span style="font-family: 'Fraunces', Georgia, serif; font-weight: 700; font-size: 26px;">{{r.hrs}}</span><span style="font-size: 13px; color: #5E5B53;"> hrs</span></div>
+              <sc-if value="{{r.pending}}" hint-placeholder-val="{{true}}">
+                <button type="button" onClick="{{r.more}}" aria-label="More hours" style="width: 36px; height: 36px; border-radius: 999px; border: 1.5px solid #E0DCCD; background: #FFFFFF; font: inherit; font-weight: 700; font-size: 18px; color: #1A1A1A; cursor: pointer;">+</button>
+              </sc-if>
+            </div>
+            <div style="flex: 1 1 100%; display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 10px; padding-left: 60px;">
+              <span style="{{r.tagStyle}}">{{r.tag}}</span>
+              <sc-if value="{{r.pending}}" hint-placeholder-val="{{true}}">
+                <button type="button" onClick="{{r.verify}}" style="min-height: 48px; min-width: 130px; padding: 0 22px; border-radius: 999px; border: 0; background: #4C6B4A; color: #FFFFFF; font: inherit; font-weight: 700; font-size: 15px; cursor: pointer;">Verify</button>
+                <button type="button" onClick="{{r.noshow}}" style="min-height: 48px; padding: 0 20px; border-radius: 999px; border: 2px solid #1A1A1A; background: #FFFFFF; color: #1A1A1A; font: inherit; font-weight: 700; font-size: 15px; cursor: pointer;">Didn't show</button>
+              </sc-if>
+              <sc-if value="{{r.done}}" hint-placeholder-val="{{false}}">
+                <button type="button" onClick="{{r.undo}}" style="min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1.5px solid #E0DCCD; background: #FFFFFF; font: inherit; font-size: 14px; font-weight: 700; color: #1A1A1A; cursor: pointer;">Undo</button>
+              </sc-if>
+            </div>
+          </div>
+        </sc-for>
+      </section>
+
+      <aside style="flex: 2 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 18px;">
+        <section style="background: #1A1A1A; color: #FAF9F5; border-radius: 24px; padding: 22px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px;">
+          <div style="font-size: 14px; color: #B9B3A8;">How verifying works</div>
+          <div style="font-size: 15px; line-height: 1.55;">Check-in and check-out times come from the QR scan, so the hours are filled in for you. Adjust them if someone stayed late or left early, then verify.</div>
+          <div style="font-size: 15px; line-height: 1.55;">Verified hours show on the student's transcript as <span style="color: #99D293; font-weight: 700;">Nonprofit-verified</span>.</div>
+        </section>
+        <section style="background: #FFFFFF; border-radius: 24px; padding: 22px; box-sizing: border-box;">
+          <h2 style="margin: 0 0 6px; font-family: 'Fraunces', Georgia, serif; font-size: 22px;">Recently verified</h2>
+          <div style="display: flex; justify-content: space-between; gap: 10px; padding: 11px 0; border-top: 1px solid #E5E1D3; font-size: 15px;"><span><span style="font-weight: 700;">Kim C.</span> · Lunch Delivery</span><span style="color: #5E5B53;">3 hrs</span></div>
+          <div style="display: flex; justify-content: space-between; gap: 10px; padding: 11px 0; border-top: 1px solid #E5E1D3; font-size: 15px;"><span><span style="font-weight: 700;">Dara P.</span> · Tech Help</span><span style="color: #5E5B53;">2 hrs</span></div>
+          <div style="display: flex; justify-content: space-between; gap: 10px; padding: 11px 0; border-top: 1px solid #E5E1D3; font-size: 15px;"><span><span style="font-weight: 700;">Tommies Serve club</span> · 8 people</span><span style="color: #5E5B53;">24 hrs</span></div>
+          <a href="CheckIn.html" style="display: inline-block; margin-top: 10px; font-weight: 700; font-size: 14px;">Go to day-of check-in</a>
+        </section>
+      </aside>
+    </div>
+
+  </main>
+</div>
+</template>
+<script type="text/x-dc" id="dc-logic">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { st: {}, hrs: {} };
+  }
+  renderVals() {
+    var self = this;
+    var defs = [
+      { id: 'a', ini: 'AN', name: 'Aisha N.', school: 'Univ. of St. Thomas', inT: '8:58', outT: '11:02', hrs: 2 },
+      { id: 'e', ini: 'EV', name: 'Elena V.', school: 'Returning volunteer', inT: '9:04', outT: '11:00', hrs: 2 },
+      { id: 'm', ini: 'MR', name: 'Marcus R.', school: 'Shakopee High', inT: '9:00', outT: '11:05', hrs: 2 },
+      { id: 'j', ini: 'JL', name: 'Jordan L.', school: 'Univ. of Minnesota', inT: '9:10', outT: '11:00', hrs: 2 }
+    ];
+    var st = this.state.st, H = this.state.hrs;
+    var set = function (key, id, v) { var o = Object.assign({}, self.state[key]); if (v === null) { delete o[id]; } else { o[id] = v; } var p = {}; p[key] = o; self.setState(p); };
+    var tag = 'font-size: 13px; font-weight: 700; border-radius: 999px; padding: 6px 14px; ';
+    var pend = 0, pendHrs = 0, doneHrs = 0;
+    var rows = defs.map(function (d) {
+      var s = st[d.id];
+      var h = H[d.id] != null ? H[d.id] : d.hrs;
+      if (!s) { pend++; pendHrs += h; } else if (s === 'ok') { doneHrs += h; }
+      return {
+        ini: d.ini, name: d.name, school: d.school, inT: d.inT, outT: d.outT,
+        hrs: s === 'no' ? 0 : h, pending: !s, done: !!s,
+        tag: s === 'ok' ? 'Verified' : (s === 'no' ? "Marked as didn't show" : 'Waiting for you'),
+        tagStyle: tag + (s === 'ok' ? 'background: #99D293; color: #1A1A1A;' : (s === 'no' ? 'background: #E5E1D3; color: #5E5B53;' : 'background: #F3E6DC; color: #7A4A21;')),
+        less: function () { set('hrs', d.id, Math.max(0.5, h - 0.5)); },
+        more: function () { set('hrs', d.id, Math.min(12, h + 0.5)); },
+        verify: function () { set('st', d.id, 'ok'); },
+        noshow: function () { set('st', d.id, 'no'); },
+        undo: function () { set('st', d.id, null); }
+      };
+    });
+    var base = 'min-height: 52px; padding: 0 26px; border-radius: 999px; border: 0; font: inherit; font-weight: 700; font-size: 16px; ';
+    return {
+      rows: rows, pendingCount: pend, pendingHrs: pendHrs, doneHrs: doneHrs, noneLeft: pend === 0,
+      allStyle: base + (pend === 0 ? 'background: #E5E1D3; color: #5E5B53; cursor: default;' : 'background: #4C6B4A; color: #FFFFFF; cursor: pointer;'),
+      verifyAll: function () { var o = Object.assign({}, self.state.st); defs.forEach(function (d) { if (!o[d.id]) { o[d.id] = 'ok'; } }); self.setState({ st: o }); }
+    };
+  }
+}
+</script>
+<div aria-label="Demo with sample data" style="position:fixed;right:16px;bottom:16px;z-index:50;background:#1A1A1A;color:#FAF9F5;font:600 13px/1 Poppins,system-ui,sans-serif;padding:10px 14px;border-radius:999px;box-shadow:0 2px 10px rgba(0,0,0,.18)">Demo · sample data</div>
+</body>
+</html>
