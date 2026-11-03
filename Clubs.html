@@ -46,14 +46,14 @@ a{color:#1A1A1A}a:hover{color:#4C6B4A}
   </nav>
   <main style="flex: 999 1 560px; min-width: 0; box-sizing: border-box; padding: 28px clamp(16px, 3vw, 40px) 48px; display: flex; flex-direction: column; gap: 24px;">
     <div>
-      <h1 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: clamp(32px, 3.6vw, 44px); line-height: 1.05;">Clubs</h1>
+      <h1 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 700; font-size: clamp(32px, 3.6vw, 44px); line-height: 1.05; letter-spacing: -1px;">Clubs</h1>
       <p style="margin: 10px 0 0; font-size: 16px; line-height: 1.6; color: #5E5B53; max-width: 640px;">Small groups that want to be part of Eastside Senior Commons. You decide who's linked.</p>
     </div>
 
     <div style="display: flex; flex-wrap: wrap; gap: 22px; align-items: flex-start;">
       <div style="flex: 3 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 22px;">
         <section>
-          <h2 style="margin: 0 0 12px; font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 24px;">Waiting for you <span style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; background: #B97F5B; color: #1A1A1A; border-radius: 999px; padding: 3px 10px; vertical-align: middle;">{{pendingCount}}</span></h2>
+          <h2 style="margin: 0 0 12px; font-family: 'Fraunces', Georgia, serif; font-weight: 700; font-size: 24px;">Waiting for you <span style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 700; background: #B97F5B; color: #1A1A1A; border-radius: 999px; padding: 3px 10px; vertical-align: middle;">{{pendingCount}}</span></h2>
           <div style="display: flex; flex-direction: column; gap: 12px;">
             <sc-for list="{{pending}}" as="c" hint-placeholder-count="2">
               <div style="background: #FFFFFF; border: 1.5px solid #E0DCCD; border-radius: 20px; padding: 18px 20px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px;">
@@ -61,11 +61,11 @@ a{color:#1A1A1A}a:hover{color:#4C6B4A}
                 <div style="flex: 1 1 220px; min-width: 0;">
                   <div style="font-weight: 700; font-size: 17px;">{{c.name}}</div>
                   <div style="font-size: 14px; color: #5E5B53; margin-top: 2px;">{{c.what}}</div>
-                  <div style="font-size: 13px; color: #4C6B4A; font-weight: 600; margin-top: 4px;">{{c.members}} members · {{c.led}}</div>
+                  <div style="font-size: 13px; color: #4C6B4A; font-weight: 700; margin-top: 4px;">{{c.members}} members · {{c.led}}</div>
                 </div>
                 <div style="display: flex; gap: 8px;">
-                  <button type="button" onClick="{{c.decline}}" style="min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1.5px solid #E0DCCD; background: #FFFFFF; font: inherit; font-size: 14px; font-weight: 600; color: #1A1A1A; cursor: pointer;">Not now</button>
-                  <button type="button" onClick="{{c.link}}" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 0; background: #4C6B4A; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer;">Link</button>
+                  <button type="button" onClick="{{c.decline}}" style="min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1.5px solid #E0DCCD; background: #FFFFFF; font: inherit; font-size: 14px; font-weight: 700; color: #1A1A1A; cursor: pointer;">Not now</button>
+                  <button type="button" onClick="{{c.link}}" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 0; background: #4C6B4A; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer;">Link</button>
                 </div>
               </div>
             </sc-for>
@@ -76,7 +76,7 @@ a{color:#1A1A1A}a:hover{color:#4C6B4A}
         </section>
 
         <section>
-          <h2 style="margin: 0 0 12px; font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 24px;">Linked clubs</h2>
+          <h2 style="margin: 0 0 12px; font-family: 'Fraunces', Georgia, serif; font-weight: 700; font-size: 24px;">Linked clubs</h2>
           <div style="background: #FFFFFF; border: 1.5px solid #E0DCCD; border-radius: 20px; padding: 6px 20px;">
             <sc-for list="{{linked}}" as="c" hint-placeholder-count="3">
               <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px; padding: 14px 0; border-bottom: 1px solid #E5E1D3;">
@@ -85,7 +85,7 @@ a{color:#1A1A1A}a:hover{color:#4C6B4A}
                   <div style="font-weight: 700; font-size: 16px;">{{c.name}}</div>
                   <div style="font-size: 13px; color: #5E5B53;">{{c.members}} members · {{c.what}}</div>
                 </div>
-                <button type="button" onClick="{{c.unlink}}" style="min-height: 40px; padding: 0 14px; border-radius: 999px; border: 0; background: transparent; font: inherit; font-size: 14px; font-weight: 600; color: #4C6B4A; cursor: pointer;">Unlink</button>
+                <button type="button" onClick="{{c.unlink}}" style="min-height: 40px; padding: 0 14px; border-radius: 999px; border: 0; background: transparent; font: inherit; font-size: 14px; font-weight: 700; color: #4C6B4A; cursor: pointer;">Unlink</button>
               </div>
             </sc-for>
           </div>
@@ -94,7 +94,7 @@ a{color:#1A1A1A}a:hover{color:#4C6B4A}
 
       <aside style="flex: 2 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 18px;">
         <section style="background: #1A1A1A; color: #FAF9F5; border-radius: 24px; padding: 24px;">
-          <h2 style="margin: 0 0 12px; font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 22px;">How clubs work</h2>
+          <h2 style="margin: 0 0 12px; font-family: 'Fraunces', Georgia, serif; font-weight: 700; font-size: 22px;">How clubs work</h2>
           <div style="display: flex; flex-direction: column; gap: 12px; font-size: 14px; line-height: 1.55; color: #E5E1D3;">
             <div>Clubs are groups of students or neighbors who volunteer together and invite each other.</div>
             <div>Linking lets a club sign up for your opportunities as a group.</div>
@@ -103,9 +103,9 @@ a{color:#1A1A1A}a:hover{color:#4C6B4A}
           </div>
         </section>
         <section style="background: #E4F1E1; border-radius: 24px; padding: 22px;">
-          <div style="font-weight: 600; font-size: 15px;">Want a club of your own?</div>
+          <div style="font-weight: 700; font-size: 15px;">Want a club of your own?</div>
           <p style="margin: 6px 0 14px; font-size: 14px; line-height: 1.55;">Invite a school club to adopt your Tuesday visits. Share one link and they can ask to join.</p>
-          <button type="button" style="min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1.5px solid #1A1A1A; background: transparent; font: inherit; font-size: 14px; font-weight: 600; color: #1A1A1A; cursor: pointer;">Copy invite link</button>
+          <button type="button" style="min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1.5px solid #1A1A1A; background: transparent; font: inherit; font-size: 14px; font-weight: 700; color: #1A1A1A; cursor: pointer;">Copy invite link</button>
         </section>
       </aside>
     </div>

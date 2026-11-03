@@ -47,10 +47,10 @@ a{color:#1A1A1A}a:hover{color:#4C6B4A}
   <main style="flex: 999 1 560px; min-width: 0; box-sizing: border-box; padding: 28px clamp(16px, 3vw, 40px) 48px; display: flex; flex-direction: column; gap: 24px;">
     <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 18px;">
       <div style="flex: 1 1 420px;">
-        <h1 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: clamp(32px, 3.6vw, 44px); line-height: 1.05;">Campaigns</h1>
+        <h1 style="margin: 0; font-family: 'Fraunces', Georgia, serif; font-weight: 700; font-size: clamp(32px, 3.6vw, 44px); line-height: 1.05; letter-spacing: -1px;">Campaigns</h1>
         <p style="margin: 10px 0 0; font-size: 16px; line-height: 1.6; color: #5E5B53; max-width: 620px;">Rally people around one goal for a set time. Campaigns show in the Samaky app next to your opportunities.</p>
       </div>
-      <button type="button" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 24px; border-radius: 999px; border: 0; background: #4C6B4A; color: #FFFFFF; font: inherit; font-weight: 600; font-size: 15px; cursor: pointer;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Start a campaign</button>
+      <button type="button" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 24px; border-radius: 999px; border: 0; background: #4C6B4A; color: #FFFFFF; font: inherit; font-weight: 700; font-size: 15px; cursor: pointer;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Start a campaign</button>
     </div>
 
     <div style="display: flex; flex-wrap: wrap; gap: 22px; align-items: flex-start;">
@@ -58,17 +58,17 @@ a{color:#1A1A1A}a:hover{color:#4C6B4A}
         <sc-for list="{{campaigns}}" as="c" hint-placeholder-count="3">
           <div style="background: #FFFFFF; border: 1.5px solid #E0DCCD; border-radius: 22px; padding: 22px; display: flex; flex-direction: column; gap: 12px;">
             <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px;">
-              <div style="font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 22px;">{{c.name}}</div>
-              <span style="font-size: 12px; font-weight: 600; border-radius: 999px; padding: 4px 12px; background: {{c.tagBg}};">{{c.tag}}</span>
+              <div style="font-family: 'Fraunces', Georgia, serif; font-weight: 700; font-size: 22px;">{{c.name}}</div>
+              <span style="font-size: 12px; font-weight: 700; border-radius: 999px; padding: 4px 12px; background: {{c.tagBg}};">{{c.tag}}</span>
             </div>
             <div style="font-size: 14px; color: #5E5B53; line-height: 1.55;">{{c.desc}}</div>
             <div>
-              <div style="display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 6px;"><span style="font-weight: 600;">{{c.done}} of {{c.goal}} {{c.unit}}</span><span style="color: #5E5B53;">{{c.when}}</span></div>
+              <div style="display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 6px;"><span style="font-weight: 700;">{{c.done}} of {{c.goal}} {{c.unit}}</span><span style="color: #5E5B53;">{{c.when}}</span></div>
               <div style="height: 10px; border-radius: 999px; background: #E5E1D3; overflow: hidden;"><div style="height: 10px; border-radius: 999px; background: #4C6B4A; width: {{c.pct}};"></div></div>
             </div>
             <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-              <button type="button" style="min-height: 42px; padding: 0 16px; border-radius: 999px; border: 1.5px solid #E0DCCD; background: #FFFFFF; font: inherit; font-size: 13px; font-weight: 600; color: #1A1A1A; cursor: pointer;">Edit</button>
-              <button type="button" style="min-height: 42px; padding: 0 16px; border-radius: 999px; border: 1.5px solid #E0DCCD; background: #FFFFFF; font: inherit; font-size: 13px; font-weight: 600; color: #1A1A1A; cursor: pointer;">Copy share link</button>
+              <button type="button" style="min-height: 42px; padding: 0 16px; border-radius: 999px; border: 1.5px solid #E0DCCD; background: #FFFFFF; font: inherit; font-size: 13px; font-weight: 700; color: #1A1A1A; cursor: pointer;">Edit</button>
+              <button type="button" style="min-height: 42px; padding: 0 16px; border-radius: 999px; border: 1.5px solid #E0DCCD; background: #FFFFFF; font: inherit; font-size: 13px; font-weight: 700; color: #1A1A1A; cursor: pointer;">Copy share link</button>
               <span style="align-self: center; font-size: 13px; color: #5E5B53;">{{c.people}}</span>
             </div>
           </div>
@@ -77,21 +77,21 @@ a{color:#1A1A1A}a:hover{color:#4C6B4A}
 
       <aside style="flex: 2 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 18px;">
         <section style="background: #FFFFFF; border: 1.5px solid #E0DCCD; border-radius: 22px; padding: 22px;">
-          <div style="font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #4C6B4A;">From the Samaky Giving Calendar</div>
-          <h2 style="margin: 6px 0 4px; font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 22px;">Ideas for this season</h2>
+          <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #4C6B4A;">From the Samaky Giving Calendar</div>
+          <h2 style="margin: 6px 0 4px; font-family: 'Fraunces', Georgia, serif; font-weight: 700; font-size: 22px;">Ideas for this season</h2>
           <sc-for list="{{ideas}}" as="i" hint-placeholder-count="3">
             <div style="display: flex; gap: 12px; align-items: flex-start; padding: 12px 0; border-top: 1px solid #E5E1D3;">
-              <div style="width: 50px; flex: 0 0 50px; text-align: center; background: #F3E6DC; border-radius: 12px; padding: 6px 0;"><div style="font-size: 11px; font-weight: 600; text-transform: uppercase;">{{i.mon}}</div><div style="font-family: 'Fraunces', Georgia, serif; font-weight: 700; font-size: 20px; line-height: 1.1;">{{i.day}}</div></div>
-              <div style="flex: 1 1 auto; min-width: 0;"><div style="font-weight: 600; font-size: 15px;">{{i.title}}</div><div style="font-size: 13px; color: #5E5B53; line-height: 1.45;">{{i.idea}}</div></div>
+              <div style="width: 50px; flex: 0 0 50px; text-align: center; background: #F3E6DC; border-radius: 12px; padding: 6px 0;"><div style="font-size: 11px; font-weight: 700; text-transform: uppercase;">{{i.mon}}</div><div style="font-family: 'Fraunces', Georgia, serif; font-weight: 700; font-size: 20px; line-height: 1.1;">{{i.day}}</div></div>
+              <div style="flex: 1 1 auto; min-width: 0;"><div style="font-weight: 700; font-size: 15px;">{{i.title}}</div><div style="font-size: 13px; color: #5E5B53; line-height: 1.45;">{{i.idea}}</div></div>
             </div>
           </sc-for>
         </section>
         <section style="background: #1A1A1A; color: #FAF9F5; border-radius: 22px; padding: 22px; display: flex; gap: 14px; align-items: flex-start;">
           <img src="brand/maky.png" alt="" style="width: 52px; height: 52px; flex: 0 0 52px; border-radius: 999px; background: #FAF9F5; object-fit: cover;">
           <div>
-            <div style="font-weight: 600; font-size: 15px;">Maky can set one up for you</div>
+            <div style="font-weight: 700; font-size: 15px;">Maky can set one up for you</div>
             <p style="margin: 6px 0 12px; font-size: 14px; line-height: 1.55; color: #E5E1D3;">Pick a date and a goal, and Maky writes the campaign page and the share message.</p>
-            <a href="Maky.html" style="display: inline-flex; align-items: center; min-height: 42px; padding: 0 16px; border-radius: 999px; background: #99D293; color: #1A1A1A; text-decoration: none; font-weight: 600; font-size: 14px;">Ask Maky</a>
+            <a href="Maky.html" style="display: inline-flex; align-items: center; min-height: 42px; padding: 0 16px; border-radius: 999px; background: #99D293; color: #1A1A1A; text-decoration: none; font-weight: 700; font-size: 14px;">Ask Maky</a>
           </div>
         </section>
       </aside>
