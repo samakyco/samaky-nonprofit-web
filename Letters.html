@@ -31,7 +31,7 @@ a{color:#1A1A1A}a:hover{color:#4C6B4A}
 <template id="dc-template">
 <div style="min-height: 100vh; display: flex; flex-wrap: wrap; align-items: stretch; background: #FAF9F5; font-family: 'Poppins', system-ui, sans-serif; color: #1A1A1A;">
 <nav aria-label="Main" style="flex: 1 1 248px; box-sizing: border-box; background: #1A1A1A; color: #FAF9F5; padding: 28px 18px; display: flex; flex-direction: column; gap: 4px;">
-    <a href="Home.html" style="display: block; padding: 0 10px 18px;"><img src="brand/samaky-logo-dark.svg" alt="Samaky, Catalyze Kindness" style="display: block; width: 160px; height: auto;"></a>
+    <a href="Home.html" style="display: block; padding: 0 10px 18px;"><img src="brand/samaky-logo-dark.svg" alt="Samaky, Catalyze Kindness" style="display: block; width: 110px; height: auto;"></a>
     <div style="margin: 0 2px 16px; padding: 14px; border-radius: 16px; background: #2A2A2A; display: flex; align-items: center; gap: 12px;">
       <div aria-hidden="true" style="width: 48px; height: 48px; flex: 0 0 48px; border-radius: 12px; background: #99D293; color: #1A1A1A; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px;">ES</div>
       <div style="min-width: 0; line-height: 1.35;"><div style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px;"><span style="font-weight: 600; font-size: 15px; color: #FAF9F5;">Eastside Senior Commons</span></div></div>
@@ -80,7 +80,7 @@ a{color:#1A1A1A}a:hover{color:#4C6B4A}
           <legend style="font-weight: 600; font-size: 15px; padding: 0; margin-bottom: 10px;">Add a sticker</legend>
           <div style="display: flex; flex-wrap: wrap; gap: 10px;">
             <sc-for list="{{stickers}}" as="s" hint-placeholder-count="3">
-              <button type="button" onClick="{{s.pick}}" aria-pressed="{{s.on}}" aria-label="{{s.label}}" style="{{s.style}}"><sc-if value="{{s.img}}" hint-placeholder-val="{{true}}"><img src="{{s.src}}" alt="" style="width: 44px; height: 44px; object-fit: contain; border-radius: 999px;"></sc-if><sc-if value="{{s.none}}" hint-placeholder-val="{{false}}"><span style="font-size: 13px; font-weight: 600; color: #5E5B53;">None</span></sc-if></button>
+              <button type="button" onClick="{{s.pick}}" aria-pressed="{{s.on}}" aria-label="{{s.label}}" style="{{s.style}}"><sc-if value="{{s.img}}" hint-placeholder-val="{{true}}"><img src="{{s.src}}" alt="" style="width: 44px; height: 44px; object-fit: contain; border-radius: {{s.radius}};"></sc-if><sc-if value="{{s.none}}" hint-placeholder-val="{{false}}"><span style="font-size: 13px; font-weight: 600; color: #5E5B53;">None</span></sc-if></button>
             </sc-for>
           </div>
         </fieldset>
@@ -106,7 +106,7 @@ a{color:#1A1A1A}a:hover{color:#4C6B4A}
               <button type="button" class="lt-env" onClick="{{open}}" aria-label="Open the letter" style="margin: auto 0; padding: 0; border: 0; background: transparent; cursor: pointer; width: min(100%, 320px);">
                 <span class="lt-env-body" style="position: relative; display: block; width: 100%; aspect-ratio: 1.6; border-radius: 6px; background: linear-gradient(170deg, #F6F3EA, #ECE7DA); box-shadow: 0 18px 30px rgba(60,50,30,.18), 0 2px 4px rgba(60,50,30,.08); transition: transform .2s ease;">
                   <svg aria-hidden="true" viewBox="0 0 320 200" preserveAspectRatio="none" style="position: absolute; inset: 0; width: 100%; height: 100%;"><path d="M2 2 L160 112 L318 2 M2 198 L140 98 M318 198 L180 98" fill="none" stroke="#D6CFBC" stroke-width="1.6"/></svg>
-                  <svg aria-hidden="true" width="64" height="64" viewBox="0 0 100 100" style="position: absolute; left: 50%; top: 52%; margin: -32px 0 0 -32px; filter: drop-shadow(0 3px 3px rgba(80,20,10,.35));"><defs><radialGradient id="ltwax" cx="38%" cy="32%" r="75%"><stop offset="0" stop-color="#CF5A39"/><stop offset=".55" stop-color="#A9361E"/><stop offset="1" stop-color="#7C2412"/></radialGradient></defs><path d="M93.6 50.0 Q93.6 50.0 92.7 54.8 Q91.9 59.6 91.0 64.4 Q90.1 69.3 86.9 73.1 Q83.8 76.9 80.2 80.2 Q76.7 83.4 73.0 86.8 Q69.3 90.1 64.9 93.0 Q60.5 96.0 55.2 96.3 Q50.0 96.6 44.8 95.9 Q39.7 95.2 35.4 92.2 Q31.1 89.2 26.5 87.3 Q21.8 85.3 18.8 81.3 Q15.7 77.3 13.4 73.1 Q11.0 68.8 9.6 64.2 Q8.1 59.6 7.3 54.8 Q6.5 50.0 5.2 44.7 Q4.0 39.5 5.9 34.6 Q7.9 29.7 10.7 25.3 Q13.6 20.9 17.3 17.3 Q21.0 13.6 26.1 12.2 Q31.2 10.9 35.7 9.0 Q40.2 7.1 45.1 5.7 Q50.0 4.3 55.1 4.6 Q60.3 5.0 65.3 6.4 Q70.3 7.8 74.8 10.5 Q79.3 13.3 81.4 18.3 Q83.5 23.3 87.3 26.8 Q91.0 30.2 92.9 35.0 Q94.7 39.8 94.2 44.9 Z" fill="url(#ltwax)"/><circle cx="50" cy="50" r="31" fill="none" stroke="#7E2513" stroke-width="2.5" opacity=".55"/><g fill="none" stroke="#7A2210" stroke-width="3.2" opacity=".85"><circle cx="50" cy="39" r="9.5"/><circle cx="61" cy="50" r="9.5"/><circle cx="50" cy="61" r="9.5"/><circle cx="39" cy="50" r="9.5"/></g><path d="M50 44l1.8 4.2 4.2 1.8-4.2 1.8L50 56l-1.8-4.2L44 50l4.2-1.8z" fill="#7A2210" opacity=".9"/></svg>
+                  <img src="brand/wax-seal.png" alt="" style="position: absolute; left: 50%; top: 52%; width: 74px; height: 74px; margin: -37px 0 0 -37px; filter: drop-shadow(0 3px 4px rgba(80,20,10,.35));">
                 </span>
               </button>
               <button type="button" onClick="{{open}}" style="min-height: 46px; padding: 0 22px; border-radius: 999px; border: 0; background: #1A1A1A; color: #FFFFFF; font: inherit; font-weight: 600; font-size: 15px; cursor: pointer;">Tap the envelope to open</button>
@@ -123,7 +123,7 @@ a{color:#1A1A1A}a:hover{color:#4C6B4A}
                 <div aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 190px; border-radius: 6px; background: #E9E3D4; box-shadow: 0 18px 30px rgba(60,50,30,.16);"></div>
                 <div style="position: absolute; inset: 0; overflow: hidden;">
                 <div class="{{letterCls}}" style="position: absolute; left: 6%; right: 6%; bottom: 46px; height: 360px; box-sizing: border-box; border-radius: 4px; background-color: #FDFDF9; background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 33px, #E2E6EB 33px, #E2E6EB 34px); background-position: 0 12px; padding: 14px 20px; box-shadow: 0 -2px 10px rgba(60,50,30,.08); font-family: 'Caveat', 'Bradley Hand', cursive; color: #1F1F1F; font-size: 23px; line-height: 34px; overflow: hidden;">
-                  <sc-if value="{{hasSticker}}" hint-placeholder-val="{{true}}"><img src="{{stickerSrc}}" alt="" style="position: absolute; right: 12px; top: 10px; width: 46px; height: 46px; object-fit: contain; border-radius: 999px; transform: rotate(8deg);"></sc-if>
+                  <sc-if value="{{hasSticker}}" hint-placeholder-val="{{true}}"><img src="{{stickerSrc}}" alt="" style="position: absolute; right: 12px; top: 10px; width: 46px; height: 46px; object-fit: contain; transform: rotate(8deg); border-radius: {{stickerRadius}};"></sc-if>
                   <div style="font-size: 28px; font-weight: 700;">Dear {{dear}},</div>
                   <div style="margin-top: 34px; white-space: pre-line;">{{note}}</div>
                   <div style="margin-top: 34px; font-size: 27px; font-weight: 700;">— {{sigName}}</div>
@@ -149,7 +149,7 @@ a{color:#1A1A1A}a:hover{color:#4C6B4A}
 class Component extends DCLogic {
   constructor(props) {
     super(props);
-    this.cfg = {"whos": [{"id": "shift", "label": "Everyone from Saturday Tech Help (12)", "send": "Send 12 letters", "dear": "Aisha", "sentMsg": "12 letters are on their way. Each one is addressed by name."}, {"id": "one", "label": "One volunteer", "send": "Send letter", "dear": "Elena", "sentMsg": "Your letter to Elena is on its way."}, {"id": "club", "label": "A club", "send": "Send to club", "dear": "Tommies Serve", "sentMsg": "Sent to all 8 members of Tommies Serve."}], "note": "Thank you for helping Mrs. Alvarez video call her grandson for the first time. She hasn't stopped talking about it. We're so glad you showed up.", "sig": "Maria, Volunteer Coordinator", "accent": "#4C6B4A", "keepColor": "#4C6B4A", "logo": "brand/samaky-mark.svg"};
+    this.cfg = {"whos": [{"id": "shift", "label": "Everyone from Saturday Tech Help (12)", "send": "Send 12 letters", "dear": "Aisha", "sentMsg": "12 letters are on their way. Each one is addressed by name."}, {"id": "one", "label": "One volunteer", "send": "Send letter", "dear": "Elena", "sentMsg": "Your letter to Elena is on its way."}, {"id": "club", "label": "A club", "send": "Send to club", "dear": "Tommies Serve", "sentMsg": "Sent to all 8 members of Tommies Serve."}], "note": "Thank you for helping Mrs. Alvarez video call her grandson for the first time. She hasn't stopped talking about it. We're so glad you showed up.", "sig": "Maria, Volunteer Coordinator", "accent": "#4C6B4A", "keepColor": "#4C6B4A", "logo": "brand/samaky-mark.svg", "logoLabel": "Samaky flower sticker"};
     this.state = { who: this.cfg.whos[0].id, sticker: 'maky', open: false, kept: false, sent: false, drafted: false };
     this.note = this.cfg.note; this.sig = this.cfg.sig; this.settled = false;
   }
@@ -161,7 +161,7 @@ class Component extends DCLogic {
     var who = cfg.whos.filter(function (w) { return w.id === st.who; })[0];
     var stDefs = [
       { id: 'maky', label: 'Maky sticker', src: 'brand/maky.png' },
-      { id: 'logo', label: 'Your logo', src: cfg.logo },
+      { id: 'logo', label: cfg.logoLabel, src: cfg.logo },
       { id: 'none', label: 'No sticker', src: '' }
     ];
     var sticker = stDefs.filter(function (d) { return d.id === st.sticker; })[0];
@@ -172,7 +172,7 @@ class Component extends DCLogic {
       whos: cfg.whos.map(function (w) { return { label: w.label, on: w.id === st.who ? 'true' : 'false', style: chip(w.id === st.who), pick: function () { self.setState({ who: w.id, sent: false }); } }; }),
       stickers: stDefs.map(function (d) {
         var on = d.id === st.sticker;
-        return { label: d.label, src: d.src, img: d.id !== 'none', none: d.id === 'none', on: on ? 'true' : 'false',
+        return { label: d.label, src: d.src, radius: d.id === 'maky' ? '999px' : '0', img: d.id !== 'none', none: d.id === 'none', on: on ? 'true' : 'false',
           style: 'width: 64px; height: 64px; border-radius: 16px; display: flex; align-items: center; justify-content: center; cursor: pointer; background: #FAF9F5; ' + (on ? 'border: 2.5px solid ' + cfg.accent + ';' : 'border: 1.5px solid #E0DCCD;'),
           pick: function () { self.setState({ sticker: d.id }); } };
       }),
@@ -189,7 +189,7 @@ class Component extends DCLogic {
       replay: function () { self.setState({ open: false }); },
       flapCls: anim ? 'lt-flap-anim' : '', letterCls: anim ? 'lt-up-anim' : '',
       dear: who.dear,
-      hasSticker: sticker.id !== 'none', stickerSrc: sticker.src,
+      hasSticker: sticker.id !== 'none', stickerSrc: sticker.src, stickerRadius: sticker.id === 'maky' ? '999px' : '0',
       sigName: comma > -1 ? this.sig.slice(0, comma).trim() : this.sig.trim(),
       sigRole: comma > -1 ? this.sig.slice(comma + 1).trim() : '',
       keep: function () { self.setState({ kept: true }); },
